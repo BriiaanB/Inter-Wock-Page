@@ -18,17 +18,27 @@
 }
 
 .menu {
-   position: absolute;
+   position: fixed;
    z-index: 100;
    width: 100%;
 }
 
 .menu a {
+   text-decoration: none;
+   color: #fff;
    position: absolute;
    right: 10px;
-   margin-top: 15px;
-   text-decoration: none;
+   margin-top: 17px;
+   min-width: 100px;
+   padding: 5px;
+   border-radius: 20px;
+   font-size: 25px;
 }
+
+.menu a:hover {
+   background-color: #62627c;
+}
+
 
 .banner-container {
    position: relative;
@@ -42,7 +52,45 @@
 }
 
 @media (max-width: 500px) {
+   .logotipo-container {
+      height: 50px;
+   }
+   .logotipo {
+      height: 50px;
+   }
    .banner-container {
       height: 500px;
+   }
+   .menu a {
+      font-size: 20px;
+      right: 0;
+      margin-top: 8px;
+   }
+}
+
+@media (max-width: 316px) {
+   .menu a {
+      font-size: 18px;
+      margin-top: 10px;
+   }
+}
+
+@media (max-width: 300px) {
+   .logotipo-container {
+      height: 100px;
+   }
+   .menu a {
+      margin-top: 60px;
+      left: 80px;
+      font-size: 18px;
+   }
+   .banner-container {
+      top: 50px;
+   }
+}
+
+@media (max-width: 220px) {
+   .menu a {
+      left: 45px;
    }
 }
