@@ -9,6 +9,7 @@
    width: 100%;
    background-color: #04070e;
    position: fixed;
+   z-index: 1000;
 }
 
 .logotipo {
@@ -19,7 +20,8 @@
 .banner-container {
    position: relative;
    top: 30px;
-   height: 100vh;
+   height: 100%;
+   width: 100%;
 }
 
 .banner {
