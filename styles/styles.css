@@ -4,7 +4,7 @@
    font-size: 30px;
 }
 
-.logotipo-container {
+.logotipo__container {
    height: 70px;
    width: 100%;
    background-color: #04070e;
@@ -40,31 +40,317 @@
 }
 
 
-.banner-container {
-   position: relative;
+.banner__container {
+   position: absolute;
    top: 30px;
-   height: 100%;
+   height: 100vh;
    width: 100%;
+   display: flex;
 }
 
 .banner {
    height: 100%;
+   width: 100%;
+}
+
+.banner__container-items {
+   width: 100%;
+   height: 100%;
+}
+
+.banner__text1 {
+   top: 70px;
+   color: #000;
+   right: 22px;
+   font-weight: 900;
+   font-size: 40px;
+   cursor: default;
+}
+
+.gratis {
+   cursor: default;
+   top: 125px;
+   right: 210px;
+   font-size: 55px;
+   font-weight: 900;
+   color: rgb(14, 5, 94);
+}
+
+.cobrar {
+   cursor: default;
+   top: 205px;
+   right: 5px;
+   font-size: 30px;
+   font-weight: 900;
+   color: rgb(14, 107, 29);
+}
+
+.mantenimiento1, .mantenimiento2 {
+   display: none;
+}
+
+.mil {
+   cursor: pointer;
+   top: 270px;
+   right: 190px;
+   font-size: 35px;
+   font-weight: 900;
+   color: rgb(207, 138, 34);
+   background-color: #04070e;
+   padding: 5px 10px;
+   border-radius: 10px;
+}
+
+.mil:hover {
+   background-color: #fff;
+   color: #000;
+   border: 1px solid #000;
+}
+
+@media (max-width: 1029px) {
+   .cobrar {
+      font-size: 25px;
+   }
+   .banner__text1 {
+      right: 5px;
+      font-size: 38px;
+   }
+   .gratis {
+      right: 183px;
+   }
+   .mil {
+      right: 160px;
+   }
+}
+
+@media (max-width: 925px) {
+   .banner__text1 {
+      font-size: 34px;
+   }
+   .gratis {
+      font-size: 46px;
+      right: 170px;
+   }
+   .cobrar {
+      font-size: 23px;
+   }
+   .mil {
+      right: 143px;
+      font-size: 30px;
+   }
+}
+
+@media (max-width: 848px) {
+   .banner__text1 {
+      font-size: 32px;
+   }
+   .gratis {
+      font-size: 43px;
+      right: 160px;
+   }
+   .cobrar {
+      font-size: 22px;
+   }
+   .mil {
+      right: 140px;
+      font-size: 26px;
+   }
+}
+
+@media (max-width: 803px) {
+   .banner__text1 {
+      font-size: 28px;
+      right: 30px;
+   }
+   .gratis {
+      right: 153px;
+   }
+   .cobrar {
+      font-size: 19px;
+      right: 10px;
+   }
+   .mil {
+      right: 140px;
+      font-size: 25px;
+      top: 260px;
+   }
+}
+
+@media (max-width: 722px) {
+   .banner__text1 {
+      font-size: 26px;
+      right: 21px;
+   }
+   
+   .gratis {
+      right: 125px;
+      top: 110px;
+   }
+   
+   .cobrar {
+      font-size: 19px;
+      right: 10px;
+      display: none;
+   }
+   
+   .mil {
+      right: 116px;
+      font-size: 25px;
+      top: 270px;
+   }
+   .mantenimiento1, .mantenimiento2 {
+      display: flex;
+      cursor: default;
+      font-size: 25px;
+      font-weight: 900;
+      color: rgb(14, 107, 29);
+   }
+   .mantenimiento1 {
+      top: 180px;
+      right: 90px;
+   }
+   .mantenimiento2 {
+      right: 62px;
+      top: 210px;
+   }
+}
+
+@media (max-width: 667px) {
+   .banner__text1 {
+      font-size: 23px;
+   }
+   .gratis {
+      right: 50px;
+   }
+   .mantenimiento1 {
+      right: 33px;
+   }
+   .mantenimiento2 {
+      right: 32px;
+   }
+   .mil {
+      right: 90px;
+   }
+}
+
+@media (max-width: 600px) {
+   .banner__text1 {
+      font-size: 21px;
+      right: 5px;
+   }
+   .gratis {
+      right: 65px;
+   }
+   .mil {
+      right: 60px;
+   }
+   .mantenimiento2 {
+      right: 7px;
+   }
+}
+
+@media (max-width: 520px) {
+   .banner__text1 {
+      font-size: 20px;
+   }
+   .mantenimiento1 {
+      right: 28px;
+      font-size: 22px;
+      }
+      .mantenimiento2 {
+         right: 5px;
+         font-size: 22px;
+      }
+      .gratis {
+         right: 50px;
+      }
+      .mil {
+         right: 45px;
+      }
 }
 
 @media (max-width: 500px) {
-   .logotipo-container {
+   .logotipo__container {
       height: 50px;
    }
    .logotipo {
       height: 50px;
    }
-   .banner-container {
+   .banner__container {
       height: 500px;
    }
    .menu a {
       font-size: 20px;
       right: 0;
       margin-top: 8px;
+   }
+   .banner__text1 {
+      font-size: 18px;
+      right: 10px;
+   }
+}
+
+@media (max-width: 460px) {
+   .banner__container {
+      height: 400px;
+   }
+}
+
+@media (max-width: 440px) {
+   .banner__container {
+      height: 350px;
+   }
+   .banner__text1 {
+      font-size: 14px;
+      right: 3px;
+      top: 50px;
+   }
+   .gratis {
+      font-size: 32px;
+      top: 70px;
+      right: 40px;
+   }
+   .mantenimiento1 {
+      top: 120px;
+      right: 10px;
+      font-size: 18px;
+   }
+   .mantenimiento2 {
+      top:150px;
+      right: 0;
+      font-size: 18px;
+   }
+   .mil {
+      right: 10px;
+      top: 220px;
+   }
+}
+
+@media (max-width: 375px) {
+   .mantenimiento1 {
+      font-size: 17px;
+   }
+   .mantenimiento2 {
+      font-size: 17px;
+      top: 140px;
+   }
+}
+
+@media (max-width: 347px) {
+   .banner__text1 {
+      font-size: 12px;
+      top: 55px;
+   }
+   .gratis {
+      font-size: 30px;
+      right: 10px;
+      top: 76px;
+   }
+   .mantenimiento1 {
+      font-size: 13px;
+   }
+   .mantenimiento2 {
+      font-size: 13px;
    }
 }
 
@@ -76,7 +362,7 @@
 }
 
 @media (max-width: 300px) {
-   .logotipo-container {
+   .logotipo__container {
       height: 100px;
    }
    .menu a {
@@ -84,7 +370,7 @@
       left: 80px;
       font-size: 18px;
    }
-   .banner-container {
+   .banner__container {
       top: 50px;
    }
 }
