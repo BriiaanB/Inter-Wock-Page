@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
@@ -12,25 +12,39 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap"
       rel="stylesheet">
-      <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+   <script src="https://kit.fontawesome.com/4c917bd7a7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
    <header>
-      <a href="index.html" class="logo"><img class="logo" src="./img/logo.png" alt="Logo"></a>
+      <a href="index.html" class="logo"><img class="logo" src="img/logo.png" alt="Logo"></a>
       <button id="abrir" class="abrir-menu"><i class="bi bi-list barras"></i></button>
       <nav class="nav" id="nav">
          <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
          <ul class="nav-list">
-            <li class="ultimas-noticias"><a href="#" >ULTIMAS NOTICIAS</a></li>
-            <li><a href="#">PARANÁ</a></li>
-            <li><a href="#">DEPORTES</a></li>
-            <li><a href="#">NACIONAL</a></li>
-            <li><a href="#">INTERNACIONAL</a></li>
+            <li class="pagina-seleccionada" class="margen-derecho"><a href="index.html" >ULTIMAS NOTICIAS</a></li>
+            <li class="margen-derecho"><a href="paginas/parana.html">PARANÁ</a></li>
+            <li><a href="paginas/masnoticias.html">MAS NOTICIAS</a></li>
          </ul>
       </nav>
    </header>
+
+   <div class="seccion-secundaria">
+      <div class="colectivo">
+         <p><a href="#"><i class="fa-solid fa-bus"></i>COLECTIVOS</a></p>
+      </div>
+      <hr>
+      <div class="clima">
+         <P><a href="#"><i class="fa-solid fa-cloud"></i>CLIMA</a></P>
+      </div>
+      <hr>
+      <div class="empleos">
+         <P><a href="#"><i class="fa-solid fa-briefcase"></i>EMPLEOS</a></P>
+      </div>
+      <hr>
+   </div>
 
    <section class="seccion-principal">
       <h2 class="encabezado">ULTIMAS NOTICIAS</h2>
@@ -38,9 +52,9 @@
       <!-- NOTICIA NUMERO 1 (UNO)-->
       <article class="seccion-principal__articulos">
          <i>18/02</i>
-         <a href="#"><p>Nacional</p></a>
-         <a href="#" class="control"><h2>Argentina campeona del mundo es la mejor de la Historia</h2></a>
-         <a href="#"><img
+         <a href="noticias/noticia01.html"><p>Nacional</p></a>
+         <a href="noticias/noticia01.html" class="control"><h2>Argentina campeona del mundo es la mejor de la Historia</h2></a>
+         <a href="noticias/noticia01.html"><img
             src="https://media.ambito.com/p/d8efe077e052a5d6f03f59f76e2f98ba/adjuntos/239/imagenes/040/368/0040368215/argentina-campeon.jpg"
             alt=""></a>
          </article>
