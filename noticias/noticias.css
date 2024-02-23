@@ -1,0 +1,53 @@
+.lugar-y-fecha p i {
+   display: inline-block;
+   padding: 0 10px 0 0;
+   color: red;
+}
+
+.lugar {
+   padding-right: 40px;
+}
+
+.lugar-y-fecha {
+   display: flex;
+   justify-content: space-between;
+   font-weight: 900;
+   background-color: rgb(240, 243, 243);
+   flex-wrap: wrap;
+   color: grey;
+   padding: 0 10px;
+}
+
+.noticia {
+   display: flex;
+   flex-direction: column;
+   padding: 0px 20px;
+}
+
+.titulo {
+   font-size: 45px;
+   font-family: "Rationale", sans-serif, Times, 'Times New Roman', cambria;
+   line-height: 38px;
+   padding-bottom: 10px;
+}
+
+.subtitulo {
+   font-size: 1.2em;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.portada {
+   display: block;
+   width: 100%;
+   height: 400px;
+}
+
+div img {
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+}
+
+body {
+   padding-top: 75px;
+}
