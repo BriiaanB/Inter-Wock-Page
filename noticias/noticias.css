@@ -16,6 +16,7 @@
    flex-wrap: wrap;
    color: grey;
    padding: 0 10px;
+   outline: solid 1px rgb(65, 65, 65);
 }
 
 .noticia {
