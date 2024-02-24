@@ -5,7 +5,7 @@
 }
 
 body {
-   padding-top: 130px;
+   padding-top: 110px;
 }
 
 header {
@@ -72,7 +72,7 @@ header {
 .seccion-principal__articulos {
    flex-grow: 1;
    width: 30%;
-   min-width: 250px;
+   min-width: 400px;
    margin:25px 15px;
    display: flex;
    position: relative;
@@ -86,7 +86,7 @@ header {
 
 .encabezado {
    position: relative;
-   top: -70px;
+   top: -65px;
 }
 
 .seccion-secundaria {
@@ -95,7 +95,7 @@ header {
    position: relative;
    display: flex;
    width: 100%;
-   top: 30px;
+   top: 15px;
 }
 
 .seccion-secundaria div {
@@ -108,12 +108,29 @@ header {
    padding: 0 30px 0 0;
 }
 
+.colectivo {
+   padding-left: 10px;
+}
+
+.empleos {
+   padding-right: 10px;
+}
+
 .colectivo i {
    color: #b61a1a;
 }
 
 .clima i {
    color: rgb(77, 240, 240);
+}
+
+.colectivo, .clima, .empleos {
+   position: relative;
+   top: 2.5px;
+}
+
+.linea {
+   display: none;
 }
 
 .seccion-secundaria div i {
@@ -161,14 +178,21 @@ article i {
    margin-right: 50px;
 }
 
-@media screen and (max-width: 1000px) {
-   .seccion-secundaria {
-      justify-content: space-between;
-   }
+@media screen and (max-width: 864px) {
+   .seccion-principal__articulos {
+         flex-grow: 1;
+         width: 30%;
+         min-width: 330px;
+         margin: 25px 15px;
+         display: flex;
+         position: relative;
+      }
 }
 
 
-@media screen and (max-width: 625px) {
+
+
+@media screen and (max-width: 550px) {
 
    .abrir-menu,
    .cerrar-menu {
@@ -251,13 +275,13 @@ article i {
    }
 }
 
-@media screen and (max-width: 472px) {
-   .seccion-secundaria div {
-      font-size: 15px;
+@media screen and (max-width: 560px) {
+   .seccion-secundaria {
+      justify-content: space-between;
    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 493px) {
    .seccion-secundaria {
       flex-direction: column;
       top: -40px;
@@ -267,11 +291,37 @@ article i {
       padding-left: 5px;
    }
    .encabezado {
-      top: -120px;
+      top: -115px;
    }
    body {
       padding-top: 160px;
    }
+   .linea {
+      display: block;
+   }
+      .seccion-secundaria div {
+         font-size: 15px;
+      }
+   .colectivo i {
+         margin-right: 2px;
+         position: relative;
+         left: -1px;
+      }
+   
+   .clima i {
+         position: relative;
+         left: -1.5px;
+      }
+   .empleos i {
+         margin-right: 4px;
+         position: relative;
+      }
+}
+
+@media screen and (max-width: 360px) {
+   .seccion-principal__articulos {
+         min-width: 200px;
+      }
 }
 
 @media screen and (max-width: 340px) {
@@ -284,11 +334,11 @@ article i {
 }
 
 @media screen and (max-width: 300px) {
-   .seccion-principal__articulos {
-         min-width: 200px;
-      }
    .nav-list li {
       font-size: .7em;
+      }
+      article h2 {
+         font-size: .7em;
       }
 }
 
