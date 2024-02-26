@@ -4,8 +4,36 @@
    box-sizing: border-box;
 }
 
+article {
+   display: flex;
+   justify-content: center;
+   width: 400px;
+   height: 300px;
+   outline: solid #000000 1px;
+   position: relative;
+   margin: 10px;
+}
+
+article img {
+   object-fit: contain;
+   width: 100%;
+   height: 100%;
+}
+
+.titulo {
+   position: absolute;
+   bottom: 0px;
+   background-color: #ecececb2;
+   width: 100%;
+   height: 100px;
+   display: grid;
+   place-items: center;
+   text-align: center;
+   padding: 3px;
+}
+
 body {
-   padding-top: 110px;
+   padding-top: 150px;
 }
 
 header {
@@ -67,26 +95,15 @@ header {
    display: flex;
    width: 100%;
    flex-wrap: wrap;
-}
-
-.seccion-principal__articulos {
-   flex-grow: 1;
-   width: 30%;
-   min-width: 400px;
-   margin:25px 15px;
-   display: flex;
-   position: relative;
-}
-
-.seccion-principal__articulos img {
-   object-fit: cover;
-   height: 100%;
-   width: 100%;
+   justify-content: center;
 }
 
 .encabezado {
-   position: relative;
-   top: -65px;
+   position: absolute;
+   top: 75px;
+   border: solid #000000 1px;
+   width: 100%;
+   padding: 3px 10px;
 }
 
 .seccion-secundaria {
@@ -95,7 +112,7 @@ header {
    position: relative;
    display: flex;
    width: 100%;
-   top: 15px;
+   top: -20px;
 }
 
 .seccion-secundaria div {
@@ -137,62 +154,100 @@ header {
    padding-right: 5px;
 }
 
-h2 {
-   position: absolute;
-   font-size: 1.2em;
-   align-self: flex-end;
-   background-color: rgba(255, 255, 255, 0.685);
-   width: 100%;
-   padding: 5px;
-   border: 1px solid rgb(0, 0, 0);
-}
-
 a {
    text-decoration: none;
    font-family: "Cabina Condensada", sans-serif;
    color: #000000;
 }
 
-article p {
-   font-size: 20PX;
-   position: absolute;
-   background-color: #ad2e2e;
-   padding: 5px;
-}
-
-.control {
-   display: inherit;
-}
-
-article i {
-   position: absolute;
-   top: -18px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   font-weight: 100;
-   border: 1px solid #000000;
-   padding: 0px 4px;
-   font-size: 13px;
-}
-
 .margen-derecho {
    margin-right: 50px;
 }
 
-@media screen and (max-width: 864px) {
-   .seccion-principal__articulos {
-         flex-grow: 1;
-         width: 30%;
-         min-width: 330px;
-         margin: 25px 15px;
-         display: flex;
-         position: relative;
+@media screen and (max-width: 440px) {
+   article {
+      width: 390px;
+      height: 250px;
+   }
+   .titulo {
+      height: 70px;
+      font-size: 22px;
+      height: 90px;
+   }
+}
+
+@media screen and (max-width: 413px) {
+   article {
+      width: 350px;
+      height: 250px;
+   }
+
+   .titulo {
+      font-size: 22px;
+   }
+}
+
+@media screen and (max-width: 375px) {
+   article {
+         width: 320px;
+         height: 250px;
       }
+   
+      .titulo {
+         font-size: 20px;
+      }
+}
+
+@media screen and (max-width: 340px) {
+   article {
+      width: 300px;
+      height: 250px;
+   }
+
+   .titulo {
+      font-size: 20px;
+   }
 }
 
 
 
+@media screen and (max-width: 327px) {
+   article {
+         width: 270px;
+         height: 200px;
+      }
+   
+      .titulo {
+         height: 80px;
+         font-size: 15px;
+      }
+}
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 300px) {
+   article {
+      width: 240px;
+      height: 200px;
+   }
+
+   .titulo {
+      height: 80px;
+      font-size: 15px;
+   }
+}
+
+@media screen and (max-width: 260px) {
+   article {
+      width: 200px;
+      height: 200px;
+   }
+
+   .titulo {
+      height: 80px;
+      font-size: 15px;
+   }
+}
+
+@media screen and (max-width: 700px) {
 
    .abrir-menu,
    .cerrar-menu {
@@ -266,10 +321,6 @@ article i {
       color: #ecececec;
    }
 
-   .seccion-principal__articulos {
-      max-height: 300px;
-   }
-
    .margen-derecho {
       margin-right: 0;
    }
@@ -284,17 +335,17 @@ article i {
 @media screen and (max-width: 493px) {
    .seccion-secundaria {
       flex-direction: column;
-      top: -40px;
+      top: -70px;
    }
    .seccion-secundaria div {
       padding-bottom: 7px;
       padding-left: 5px;
    }
    .encabezado {
-      top: -115px;
+      top: 70px;
    }
    body {
-      padding-top: 160px;
+      padding-top: 190px;
    }
    .linea {
       display: block;
@@ -318,16 +369,7 @@ article i {
       }
 }
 
-@media screen and (max-width: 360px) {
-   .seccion-principal__articulos {
-         min-width: 200px;
-      }
-}
-
 @media screen and (max-width: 340px) {
-   article h2 {
-      font-size: 1em;
-   }
    .nav-list li {
       font-size: 1.1em;
    }
@@ -337,13 +379,4 @@ article i {
    .nav-list li {
       font-size: .7em;
       }
-      article h2 {
-         font-size: .7em;
-      }
-}
-
-@media screen and (max-width: 235px) {
-   .seccion-principal__articulos {
-      min-width: 150px;
-   }
 }
