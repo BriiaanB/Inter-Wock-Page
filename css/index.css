@@ -438,6 +438,9 @@ a {
          top: -160px;
          left: -11em;
       }
+      .nav-list-secundario {
+         height: 300px;
+      }
 }
 
 @media screen and (max-width: 340px) {
