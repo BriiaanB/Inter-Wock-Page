@@ -5,7 +5,7 @@
 }
 
 body {
-   padding-top: 140px;
+   padding-top: 130px;
 }
 
 header {
@@ -150,7 +150,7 @@ article img {
 
 .encabezado {
    position: absolute;
-   top: 110px;
+   top: 73px;
    border: solid #000000 1px;
    width: 100%;
    padding: 3px 10px;
@@ -164,6 +164,10 @@ a {
 
 .margen-derecho {
    margin-right: 50px;
+}
+
+.fondo-marcado {
+   color: #ad2e2e;
 }
 
 @media screen and (max-width: 440px) {
@@ -186,6 +190,15 @@ a {
 
    .titulo1 {
       font-size: 22px;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .encabezado {
+      font-size: 20px;
+   }
+   body {
+      padding-top:120px;
    }
 }
 
@@ -458,7 +471,10 @@ a {
 @media screen and (max-width: 260px) {
    .encabezado {
       font-size: 15px;
-      top: 180px;
+      top: 73px;
+   }
+   body {
+      padding-top: 115px;
    }
 }
 
