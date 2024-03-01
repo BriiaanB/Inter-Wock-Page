@@ -1,179 +1,93 @@
-* {
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-#encabezado-clima {
-   border-color: #fff;
-   color: #fff;
-   position: absolute;
-   top: 76px;
-}
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Noti Parana - Ultimas Noticias</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="../css/index.css">
+   <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+   <script src="https://kit.fontawesome.com/4c917bd7a7.js" crossorigin="anonymous"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+      <link rel="stylesheet" href="clima.css">
+</head>
 
-body {
-   background-color: #1c1c1ce7;
-}
+<body>
 
-.error-de-clima {
-   color: #fff;
-   padding: 0 5px 10px 5px;
-}
+   <header>
+      <a href="../index.html" class="logo"><img class="logo" src="../img/logo.png" alt="Logo"></a>
+      <button id="abrir" class="abrir-menu"><i class="bi bi-list barras"></i></button>
+      <nav class="nav" id="nav">
+         <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+         <ul class="nav-list">
+            <li class="margen-derecho"><a href="../index.html">ULTIMAS NOTICIAS</a></li>
+            <li class="margen-derecho"><a href="../paginas/parana.html">PARANÁ</a></li>
+            <li class="margen-derecho"><a href="../paginas/policiales.html">POLICIALES</a></li>
+            <li class="mas-noticias">
+               <a href="#">
+                  <p class="hola">MAS NOTICIAS<i class="fa-solid fa-chevron-down flecha"></i></p>
+                  <ul class="nav-list-secundario">
+                     <a href="economia.html" class="fondo">
+                        <li>Economía</li>
+                     </a>
+                     <a href="politica.html" class="fondo">
+                        <li>Politica</li>
+                     </a>
+                     <a href="internacional.html" class="fondo">
+                        <li>Internacional</li>
+                     </a>
+                     <a href="deportes.html" class="fondo">
+                        <li>Deportes</li>
+                     </a>
+                     <a href="cultura-eventos.html" class="fondo fondo-marcado">
+                        <li>Cultura/Eventos</li>
+                     </a>
+                     <a href="clima.html" class="fondo">
+                        <li><span class="fondo-marcado">Clima</span><i class="fa-solid fa-cloud nube"></i></li>
+                     </a>
+                     <a href="empleos.html" class="fondo">
+                        <li>Empleos<i class="fa-sharp fa-solid fa-suitcase maletin"></i></li>
+                     </a>
+                  </ul>
+               </a>
+            </li>
+         </ul>
+      </nav>
+   </header>
 
-.error-de-clima i {
-   padding-left: 7px;
-   color: rgb(202, 27, 27);
-}
+   <section class="seccion-principal">
+      <h2 class="encabezado" id="encabezado-clima">CLIMA</h2>
 
-.error-de-clima-container {
-   width: 100%;
-   text-align: center;
-}
+      <div class="error-de-clima-container">
+         <h2 class="error-de-clima">Para que funcione correctamente permita la ubicacion del dispositivo<i
+               class="fa-solid fa-thumbtack"></i></h2>
+      </div>
 
-.grados, .cielo, .sol, .parana, .viento, .viento-numero {
-   position: absolute;
-}
+      <div id="contenedor">
+         <div id="caja1">
+            <h1 id="temperatura-valor" class="grados"></h1>
+            <h1 id="temperatura-descripcion" class="cielo"></h1>
+         </div>
+         <div id="caja2">
+            <h2 id="ubicacion" class="parana"></h2>
+            <img class="sol" id="icono-animado" src="" alt="">
+         </div>
+         <div id="caja3">
+            <h3 class="viento">Veloc. del Viento</h3>
+            <h1 class="viento-numero" id="viento-velocidad"></h1>
+         </div>
+      </div>
+   </section>
+   <footer>
 
-.cielo {
-   font-size: 28px;
-   left: 12px;
-   top: 2px;
-}
+   </footer>
+   <script src="../js/index.js"></script>
+   <script src="clima.js"></script>
+</body>
 
-.grados {
-   top: 70px;
-   font-size: 60px;
-}
-
-.sol {
-   left: 1px;
-   top: 10px;
-}
-
-.parana {
-   left: 50px;
-   font-size: 30px;
-   top: -1px;
-}
-
-.viento {
-   font-size: 23px;
-   left: 10px;
-   top: 4px;
-}
-
-.viento-numero {
-   font-size: 40px;
-   top: 75px;
-   left: 15px;
-}
-
-
-
-#contenedor {
-   display: flex;
-   justify-content: center;
-}
-
-#temperatura-valor {
-   width: 100%;
-}
-
-#icono-animado {
-   width: 200px;
-   height: 200px;
-}
-
-#caja1,
-#caja2,
-#caja3 {
-   position: relative;
-   width: 200px;
-   height: 200px;
-   margin: 10px;
-   text-align: center;
-}
-
-#caja1 {
-   background-color: rgba(0, 0, 0, 0.767);
-   color: azure;
-}
-
-#caja2 {
-   background-color: darkslateblue;
-   color: azure;
-}
-
-#caja3 {
-   background-color: #2ab2ea;
-   color: azure;
-}
-
-@media screen and (max-width: 660px) {
-   #caja1, #caja2, #caja3 {
-         display: inline-block;
-         width: 150px;
-         height: 150px;
-         margin: 10px;
-      }
-
-            .cielo {
-               font-size: 20px;
-               left: 12px;
-               top: 2px;
-            }
-      
-            .grados {
-               top: 53px;
-               font-size: 50px;
-            }
-      
-            .sol {
-               left: -10px;
-               top: 10px;
-            }
-
-            #icono-animado {
-               width: 170px;
-               height: 170px;
-            }
-      
-            .parana {
-               left: 30px;
-               font-size: 30px;
-               top: -1px;
-            }
-      
-            .viento {
-               font-size: 17px;
-               left: 10px;
-               top: 4px;
-            }
-      
-            .viento-numero {
-               font-size: 30px;
-               top: 65px;
-               left: 15px;
-            }
-}
-
-@media screen and (max-width: 510px) {
-   #contenedor {
-         display: flex;
-         justify-content: center;
-         flex-direction: column;
-      }
-   }
-
-      @media screen and (max-width: 446px) {
-         .error-de-clima {
-            font-size: 18px;
-         }
-      }
-
-       @media screen and (max-width: 446px) {
-         .error-de-clima {
-              font-size: 15px;
-           }
-       }
+</html>
