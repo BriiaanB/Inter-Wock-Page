@@ -25,6 +25,12 @@ header {
    z-index: 100;
 }
 
+.zonaa {
+    position: absolute;
+    display: inline-block;
+    background-color: red;
+}
+
 .abrir-menu,
 .cerrar-menu {
    display: none;
