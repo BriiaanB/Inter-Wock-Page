@@ -29,6 +29,7 @@ header {
     position: absolute;
     display: inline-block;
     background-color: red;
+    left: 0;
 }
 
 .abrir-menu,
