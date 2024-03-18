@@ -11,6 +11,7 @@
    width: 95%;
    display: flex;
    justify-content: center;
+   flex-direction: row;
 }
 
 .lugar-y-fecha {
