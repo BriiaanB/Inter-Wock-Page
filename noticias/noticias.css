@@ -12,6 +12,9 @@
    display: flex;
    justify-content: center;
    flex-direction: row;
+}
+
+iframe {
    padding: 10px 0px 10px 0px;
 }
 
